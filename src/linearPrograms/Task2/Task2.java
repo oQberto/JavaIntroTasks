@@ -8,8 +8,9 @@ public class Task2 {
     public static double expressionValue (double a, double b, double c) {
         double finalValue;
         double squareRoot = Math.sqrt(Math.pow(b, 2) + 4 * a * c);
+
         if (squareRoot < 0) {
-            finalValue = 0.0;
+            finalValue = Double.NaN;
         }
         else {
             finalValue = ((b + squareRoot) / 2 * a) - Math.pow(a, 3) * c + Math.pow(b, -2);

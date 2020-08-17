@@ -8,5 +8,7 @@ class Task2Test {
 
     @Test
     void expressionValue() {
+
+        assertEquals(Double.NaN, Task2.expressionValue(5, 4.1, -7));
     }
 }
