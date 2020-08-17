@@ -13,7 +13,7 @@ public class Task2 {
             finalValue = Double.NaN;
         }
         else {
-            finalValue = ((b + squareRoot) / 2 * a) - Math.pow(a, 3) * c + Math.pow(b, -2);
+            finalValue = ((b + squareRoot) / (2 * a)) - Math.pow(a, 3) * c + Math.pow(b, -2);
         }
         return finalValue;
     }
