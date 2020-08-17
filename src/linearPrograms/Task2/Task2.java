@@ -6,10 +6,14 @@ package linearPrograms.Task2;
 
 public class Task2 {
     public static double expressionValue (double a, double b, double c) {
+        double finalValue;
         double squareRoot = Math.sqrt(Math.pow(b, 2) + 4 * a * c);
         if (squareRoot < 0) {
-            System.out.println("Ошибка!");
+            finalValue = 0.0;
         }
-        return ((b + squareRoot) / 2 * a) - Math.pow(a, 3) * c + Math.pow(b, -2);
+        else {
+            finalValue = ((b + squareRoot) / 2 * a) - Math.pow(a, 3) * c + Math.pow(b, -2);
+        }
+        return finalValue;
     }
 }
