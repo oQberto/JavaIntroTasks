@@ -1,4 +1,4 @@
-package linearPrograms.Task1;
+package basicsOfSoftwareCodeDevelopment.linearPrograms.Task1;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -2,7 +2,7 @@
 Вычислить значения выражения по формуле (все переменные принимают действительные значения)
 ((b + √(b^2 + 4ac)) / 2a) - a^3 * c + b^(-2)
  */
-package linearPrograms.Task2;
+package basicsOfSoftwareCodeDevelopment.linearPrograms.Task2;
 
 public class Task2 {
     public static double expressionValue (double a, double b, double c) {

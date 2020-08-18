@@ -1,4 +1,4 @@
-package linearPrograms.Task2;
+package basicsOfSoftwareCodeDevelopment.linearPrograms.Task2;
 
 import org.junit.jupiter.api.Test;
 
