@@ -13,12 +13,8 @@ public class OutputArrayPart {
 
         System.out.println();
 
-
-        System.out.println();
-
         for (int i = 0; i < matrix.length; i++) {
             System.out.print(matrix[i][columnNumber] + " ");
         }
-        System.out.println();
     }
 }
