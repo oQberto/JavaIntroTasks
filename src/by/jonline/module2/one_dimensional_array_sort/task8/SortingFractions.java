@@ -5,8 +5,6 @@
 
 package by.jonline.module2.one_dimensional_array_sort.task8;
 
-import java.util.Arrays;
-
 public class SortingFractions {
 
     public static void outputArray(Fraction[] array) {

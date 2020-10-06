@@ -10,4 +10,5 @@ class CompositionOfSquaresTest {
     void calculateProductOfSquares() {
         assertEquals(Integer.MAX_VALUE, CompositionOfSquares.calculateProductOfSquares());
     }
+
 }

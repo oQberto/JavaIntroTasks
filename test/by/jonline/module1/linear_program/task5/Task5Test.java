@@ -12,4 +12,5 @@ class Task5Test {
         assertEquals("01:00:00", Task5.calculateTime(3600));
         assertEquals("00:00:00", Task5.calculateTime(0));
     }
+
 }

@@ -33,5 +33,4 @@ class InsertTheBrickIntiTheHoleTest {
     void brickDoesNotFitTheHole () {
         assertFalse(InsertTheBrickIntiTheHole.putABrick(brick1, hole));
     }
-
 }

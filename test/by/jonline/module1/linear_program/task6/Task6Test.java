@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Task6Test {
-
     @Test
     void locationCheck() {
         assertTrue(Task6.locationCheck(-3, -2));
@@ -29,4 +28,5 @@ class Task6Test {
         assertTrue(Task6.zone2Check(0, 3));
         assertTrue(Task6.zone2Check(0, 0));
     }
+
 }

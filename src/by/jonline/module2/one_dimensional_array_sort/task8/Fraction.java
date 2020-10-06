@@ -12,18 +12,13 @@ public class Fraction {
         return denominator;
     }
 
-    Fraction (int numerator, int denominator) {
+    Fraction(int numerator, int denominator) {
         this.numerator = numerator;
         this.denominator = denominator;
     }
 
     public double toDouble() {
         return (double) numerator / (double) denominator;
-    }
-
-    @Override
-    public String toString() {
-        return numerator + "/" + denominator;
     }
 
     protected static int gcd(int numerator, int denominator) {
@@ -33,4 +28,32 @@ public class Fraction {
     protected static int lcm(int numerator, int denominator) {
         return numerator / gcd(numerator, denominator) * denominator;
     }
+
+    @Override
+    public String toString() {
+        return numerator + "/" + denominator;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+
+        Fraction other = (Fraction) obj;
+        if (numerator != other.numerator) {
+            return false;
+        }
+        if (denominator != other.denominator) {
+            return false;
+        }
+        return true;
+    }
+
 }

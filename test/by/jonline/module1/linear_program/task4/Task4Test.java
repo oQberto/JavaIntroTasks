@@ -13,4 +13,5 @@ class Task4Test {
         assertEquals(100.001, Task4.reverseNum(100.001));
         assertEquals(956.325, Task4.reverseNum(523.659));
     }
+
 }
