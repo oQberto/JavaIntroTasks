@@ -6,66 +6,22 @@
 
 package by.jonline.module4.simplest_class_and_object.task3;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.Semaphore;
-
 public class Student {
     private String surname;
     private String name;
     private String secondName;
     private int groupNumber;
-    private int[] academicPerformance;
+    private int[] academicPerformance = new int[5];
 
-    private static final int MAX_AVAILABLE = 10;
-    private static final Semaphore semaphore = new Semaphore(MAX_AVAILABLE, true);
-    private static final ArrayList<Student> instances = new ArrayList<>(MAX_AVAILABLE);
-
-    public static List<Student> selectSmartStudents(Student[] students) {
-        List<Student> exemplaryStudents = new ArrayList<>();
-
-        for (Student student : students) {
-            if (student.exemplaryStudent(student.getAcademicPerformance())) {
-                exemplaryStudents.add(student);
-            }
-        }
-        return exemplaryStudents;
+    public Student() {
     }
 
-    public boolean exemplaryStudent(int[] academicPerformance) {
-        boolean flag = false;
-        for (int i : academicPerformance) {
-            if (i >= 9) {
-                flag = true;
-            } else {
-                flag = false;
-                break;
-            }
-        }
-        return flag;
-    }
-
-    private Student() {
-    }
-
-    private Student(String surname, String name, String secondName, int groupNumber, int[] academicPerformance) {
+    public Student(String surname, String name, String secondName, int groupNumber, int[] academicPerformance) {
         this.surname = surname;
         this.name = name;
         this.secondName = secondName;
         this.groupNumber = groupNumber;
         this.academicPerformance = academicPerformance;
-    }
-
-    public static Student getInstance(int index, String surname, String name, String secondName, int groupNumber, int[] academicPerformance) throws SingletonException {
-        if (index >= 0 && index < instances.size()) {
-            return instances.get(index);
-        }
-        if (semaphore.tryAcquire()) {
-            Student tmp = new Student(surname, name, secondName, groupNumber, academicPerformance);
-            instances.add(tmp);
-            return tmp;
-        }
-        throw new SingletonException("превышен лимит на число экземпляров.");
     }
 
     public void setSurname(String surname) {
@@ -146,10 +102,5 @@ public class Student {
             return false;
         }
         return true;
-    }
-
-    @Override
-    public String toString() {
-        return "Студент " + name + " из группы " + groupNumber + " учиться хорошо!";
     }
 }
