@@ -6,6 +6,9 @@
 
 package by.jonline.module4.simplest_class_and_object.task3;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Student {
     private String surname;
     private String name;
