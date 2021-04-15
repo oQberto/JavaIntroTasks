@@ -7,7 +7,7 @@ class MyThread extends Thread {
     }
 
     public void run() {
-        System.out.println("Run: "+ getName());
+        System.out.println("Run: " + getName());
     }
 }
 
@@ -20,7 +20,7 @@ class TestThread {
         int n = input.nextInt();
         System.out.println("You selected " + n + " Threads");
 
-        for (int x=0; x<n; x++)
+        for (int x = 0; x < n; x++)
         {
             MyThread temp= new MyThread("Thread #" + x);
             temp.start();
